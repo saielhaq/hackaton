@@ -9,7 +9,7 @@ st.title("RedGuard Dashboard")
 @st.cache_data
 def load_data():
     try:
-        data = pd.read_csv('../data/data.csv')
+        data = pd.read_csv('./data/data.csv')
         data['timestamp'] = pd.to_datetime(data['timestamp'])
         return data
     except Exception as e:
